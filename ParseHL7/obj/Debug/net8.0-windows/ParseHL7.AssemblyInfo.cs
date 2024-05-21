@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParseHL7")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78b0fd153333906355e1aeae2aeb7eb0821232ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParseHL7")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParseHL7")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -18,6 +18,9 @@ using Newtonsoft.Json.Serialization;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using System.Reflection.Metadata;
+using YamlDotNet.Serialization;
+using YamlDotNet.Core;
+using YamlDotNet.Serialization.ObjectGraphVisitors;
 
 
 namespace ParseHL7
@@ -86,6 +89,9 @@ namespace ParseHL7
 
                 rtbFHIR.SelectAll();
                 rtbFHIR.Clear();
+
+                rtbYaml.SelectAll();
+                rtbYaml.Clear();
             }
 
             string filePath = tbHL7Path.Text;
@@ -230,6 +236,10 @@ namespace ParseHL7
         {
             string xmlContent = root.ToString();
             rtbXML.Text = xmlContent;
+
+            // Generate YAML from XML
+            GenerateYAMLFromXML(root);
+
             return root;
         }
 
@@ -443,6 +453,64 @@ namespace ParseHL7
                     return new ResearchStudy();
                 default:
                     throw new ArgumentException($"Unsupported HL7 segment type: {segmentName}");
+            }
+        }
+
+        private void GenerateYAMLFromXML(XElement xmlElement)
+        {
+            try
+            {
+                // Create a custom YAML serializer with formatting options and recursion handling
+                var serializer = new YamlDotNet.Serialization.SerializerBuilder()
+            .WithMaximumRecursion(100) // Set the maximum recursion depth
+            .DisableAliases() // Disable alias emission to handle circular references
+            .Build();
+
+                // Convert XML to a simplified object graph
+                var objectGraph = SimplifyXElementGraph(xmlElement);
+
+                // Convert the simplified object graph to YAML
+                var yamlOutput = serializer.Serialize(objectGraph);
+
+                // Display the YAML output in the rtbYaml rich text box
+                rtbYaml.Text = yamlOutput;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error generating YAML: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private object SimplifyXElementGraph(XElement element)
+        {
+            if (element.HasElements)
+            {
+                var simplifiedElements = new Dictionary<string, object>();
+                foreach (var childElement in element.Elements())
+                {
+                    var childElementName = childElement.Name.LocalName;
+                    if (simplifiedElements.ContainsKey(childElementName))
+                    {
+                        if (simplifiedElements[childElementName] is List<object> list)
+                        {
+                            list.Add(SimplifyXElementGraph(childElement));
+                        }
+                        else
+                        {
+                            var existingValue = simplifiedElements[childElementName];
+                            simplifiedElements[childElementName] = new List<object> { existingValue, SimplifyXElementGraph(childElement) };
+                        }
+                    }
+                    else
+                    {
+                        simplifiedElements[childElementName] = SimplifyXElementGraph(childElement);
+                    }
+                }
+                return simplifiedElements;
+            }
+            else
+            {
+                return element.Value;
             }
         }
 

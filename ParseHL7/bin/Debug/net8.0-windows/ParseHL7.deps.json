@@ -11,6 +11,7 @@
           "Hl7.Fhir.R4": "5.8.1",
           "Hl7.Fhir.Serialization": "4.3.0",
           "Newtonsoft.Json": "13.0.3",
+          "YamlDotNet": "15.1.4",
           "nhapi": "3.2.2"
         },
         "runtime": {
@@ -301,6 +302,14 @@
         "dependencies": {
           "System.Drawing.Common": "5.0.0"
         }
+      },
+      "YamlDotNet/15.1.4": {
+        "runtime": {
+          "lib/net8.0/YamlDotNet.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.1.4.0"
+          }
+        }
       }
     }
   },
@@ -540,6 +549,13 @@
       "sha512": "sha512-c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
+    },
+    "YamlDotNet/15.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IjWucOgVbhm72da0Ck3KcyvMuKT/TfilHcvtwvhLLnkn2zr5st8BkH3lDoY5lkMH9Z3jsJeLDrnBS4GpAViUqg==",
+      "path": "yamldotnet/15.1.4",
+      "hashPath": "yamldotnet.15.1.4.nupkg.sha512"
     }
   }
 }

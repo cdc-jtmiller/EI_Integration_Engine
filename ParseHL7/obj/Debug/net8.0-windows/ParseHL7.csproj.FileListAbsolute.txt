@@ -37,3 +37,5 @@ C:\Work\CSELS\DHIS\Projects\VS\Projects\ParseHL7\ParseHL7\bin\Debug\net8.0-windo
 C:\Work\CSELS\DHIS\Projects\VS\Projects\ParseHL7\ParseHL7\bin\Debug\net8.0-windows\Hl7.Fhir.ElementModel.dll
 C:\Work\CSELS\DHIS\Projects\VS\Projects\ParseHL7\ParseHL7\bin\Debug\net8.0-windows\Hl7.Fhir.Serialization.dll
 C:\Work\CSELS\DHIS\Projects\VS\Projects\ParseHL7\ParseHL7\bin\Debug\net8.0-windows\Hl7.Fhir.Support.dll
+C:\Work\CSELS\DHIS\Projects\VS\Projects\ParseHL7\ParseHL7\bin\Debug\net8.0-windows\YamlDotNet.dll
+C:\Work\CSELS\DHIS\Projects\VS\Projects\ParseHL7\ParseHL7\obj\Debug\net8.0-windows\ParseHL7.sourcelink.json

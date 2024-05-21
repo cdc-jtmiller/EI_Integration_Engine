@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2hSQz/Cj4VtxGdsnjGFdLKmo2vC8P7qbYLWm5MDNcX1+GtbLWnmyHTx0juT3tS17/1JafdtH2wXH0E1rW5CJ5A==",
+  "dgSpecHash": "dhe7u/tBijWB7+mzFUjnIsNbVhUbgPRyGrkd8a2hQN+lmR2Iq6wtdFpgosAHmKKVWQrU1yFK5EqNjr961H7xHw==",
   "success": true,
   "projectFilePath": "C:\\Work\\CSELS\\DHIS\\Projects\\VS\\Projects\\ParseHL7\\ParseHL7\\ParseHL7.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,8 @@
     "C:\\Users\\zyp9\\.nuget\\packages\\system.security.cryptography.protecteddata\\5.0.0\\system.security.cryptography.protecteddata.5.0.0.nupkg.sha512",
     "C:\\Users\\zyp9\\.nuget\\packages\\system.security.permissions\\5.0.0\\system.security.permissions.5.0.0.nupkg.sha512",
     "C:\\Users\\zyp9\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
-    "C:\\Users\\zyp9\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
+    "C:\\Users\\zyp9\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
+    "C:\\Users\\zyp9\\.nuget\\packages\\yamldotnet\\15.1.4\\yamldotnet.15.1.4.nupkg.sha512"
   ],
   "logs": []
 }

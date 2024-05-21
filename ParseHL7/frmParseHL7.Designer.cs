@@ -42,11 +42,14 @@
             tabPage4 = new TabPage();
             rtbFHIR = new RichTextBox();
             lblEIIE = new Label();
+            tabPage2 = new TabPage();
+            rtbYaml = new RichTextBox();
             tabControl1.SuspendLayout();
             tabPage3.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage5.SuspendLayout();
             tabPage4.SuspendLayout();
+            tabPage2.SuspendLayout();
             SuspendLayout();
             // 
             // tbHL7Path
@@ -87,6 +90,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage5);
             tabControl1.Controls.Add(tabPage4);
+            tabControl1.Controls.Add(tabPage2);
             tabControl1.Font = new Font("Lucida Sans", 11.25F, FontStyle.Regular, GraphicsUnit.Point,  0);
             tabControl1.Location = new Point(12, 119);
             tabControl1.Name = "tabControl1";
@@ -180,6 +184,24 @@
             lblEIIE.TabIndex = 7;
             lblEIIE.Text = "EIIE : : Epi Info Integration Engine";
             // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(rtbYaml);
+            tabPage2.Location = new Point(4, 26);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Size = new Size(1033, 410);
+            tabPage2.TabIndex = 5;
+            tabPage2.Text = "YAML";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // rtbYaml
+            // 
+            rtbYaml.Location = new Point(3, 3);
+            rtbYaml.Name = "rtbYaml";
+            rtbYaml.Size = new Size(1027, 404);
+            rtbYaml.TabIndex = 0;
+            rtbYaml.Text = "";
+            // 
             // frmParseHL7
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -197,6 +219,7 @@
             tabPage1.ResumeLayout(false);
             tabPage5.ResumeLayout(false);
             tabPage4.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -217,5 +240,7 @@
         private RichTextBox rtbFHIR;
         private TabPage tabPage5;
         private RichTextBox rtbXml2Json;
+        private TabPage tabPage2;
+        private RichTextBox rtbYaml;
     }
 }

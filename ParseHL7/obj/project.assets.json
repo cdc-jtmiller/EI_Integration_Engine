@@ -556,6 +556,19 @@
             "rid": "win"
           }
         }
+      },
+      "YamlDotNet/15.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/YamlDotNet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/YamlDotNet.dll": {
+            "related": ".xml"
+          }
+        }
       }
     }
   },
@@ -1395,6 +1408,31 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "YamlDotNet/15.1.4": {
+      "sha512": "IjWucOgVbhm72da0Ck3KcyvMuKT/TfilHcvtwvhLLnkn2zr5st8BkH3lDoY5lkMH9Z3jsJeLDrnBS4GpAViUqg==",
+      "type": "package",
+      "path": "yamldotnet/15.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "images/yamldotnet.png",
+        "lib/net47/YamlDotNet.dll",
+        "lib/net47/YamlDotNet.xml",
+        "lib/net6.0/YamlDotNet.dll",
+        "lib/net6.0/YamlDotNet.xml",
+        "lib/net7.0/YamlDotNet.dll",
+        "lib/net7.0/YamlDotNet.xml",
+        "lib/net8.0/YamlDotNet.dll",
+        "lib/net8.0/YamlDotNet.xml",
+        "lib/netstandard2.0/YamlDotNet.dll",
+        "lib/netstandard2.0/YamlDotNet.xml",
+        "lib/netstandard2.1/YamlDotNet.dll",
+        "lib/netstandard2.1/YamlDotNet.xml",
+        "yamldotnet.15.1.4.nupkg.sha512",
+        "yamldotnet.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1402,6 +1440,7 @@
       "Hl7.Fhir.R4 >= 5.8.1",
       "Hl7.Fhir.Serialization >= 4.3.0",
       "Newtonsoft.Json >= 13.0.3",
+      "YamlDotNet >= 15.1.4",
       "nhapi >= 3.2.2"
     ]
   },
@@ -1466,6 +1505,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "YamlDotNet": {
+            "target": "Package",
+            "version": "[15.1.4, )"
           },
           "nhapi": {
             "target": "Package",
