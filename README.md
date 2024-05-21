@@ -3,6 +3,8 @@ POC: Epi Info Message Integration Engine
 
 The program is a proof-of-concept.
 
-Currently, it allows the user to read in an HL7 2.x.x message.  When the message is read in, it is immediately converted to XML, JSON, and FHIR.
+Currently, it allows the user to read in an HL7 2.x.x message.  When the message is read in, it is immediately converted to XML, JSON, FHIR, and YAML.
 
 The FHIR message structure may not be 100% accurate.  Updates will happen the more information gathered on converting HL7 2.x.x messages to FHIR.
+
+Again--this is merely a proof-of-concept for demonstration purposes.
