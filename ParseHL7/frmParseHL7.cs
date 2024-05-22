@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
+using System.Xml; 
 using System.Xml.Linq;
 using NHapi.Base;
 using NHapi.Base.Parser;
@@ -92,6 +93,8 @@ namespace ParseHL7
 
                 rtbYaml.SelectAll();
                 rtbYaml.Clear();
+
+                trvXML.Nodes.Clear();
             }
 
             string filePath = tbHL7Path.Text;
@@ -234,6 +237,9 @@ namespace ParseHL7
 
         private XElement DisplayXML(XElement root)
         {
+            trvXML.Nodes.Clear();
+            PopulateTreeView(root, trvXML.Nodes);
+
             string xmlContent = root.ToString();
             rtbXML.Text = xmlContent;
 
@@ -243,6 +249,22 @@ namespace ParseHL7
             return root;
         }
 
+        private void PopulateTreeView(XElement element, TreeNodeCollection parentNodes)
+        {
+            var node = parentNodes.Add(element.Name.LocalName);
+
+            if (element.HasElements)
+            {
+                foreach (var childElement in element.Elements())
+                {
+                    PopulateTreeView(childElement, node.Nodes);
+                }
+            }
+            else
+            {
+                node.Text += ": " + element.Value;
+            }
+        }
         private void DisplayJSONxXML(XElement root)
         {
             string jsonContent = ConvertXmlToJson(root);

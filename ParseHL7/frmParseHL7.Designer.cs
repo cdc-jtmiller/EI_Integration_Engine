@@ -36,20 +36,23 @@
             tabPage3 = new TabPage();
             rtbRaw = new RichTextBox();
             tabPage1 = new TabPage();
-            rtbXML = new RichTextBox();
+            trvXML = new TreeView();
             tabPage5 = new TabPage();
             rtbXml2Json = new RichTextBox();
             tabPage4 = new TabPage();
             rtbFHIR = new RichTextBox();
-            lblEIIE = new Label();
             tabPage2 = new TabPage();
             rtbYaml = new RichTextBox();
+            lblEIIE = new Label();
+            tabPage6 = new TabPage();
+            rtbXML = new RichTextBox();
             tabControl1.SuspendLayout();
             tabPage3.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage5.SuspendLayout();
             tabPage4.SuspendLayout();
             tabPage2.SuspendLayout();
+            tabPage6.SuspendLayout();
             SuspendLayout();
             // 
             // tbHL7Path
@@ -88,6 +91,7 @@
             // 
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage6);
             tabControl1.Controls.Add(tabPage5);
             tabControl1.Controls.Add(tabPage4);
             tabControl1.Controls.Add(tabPage2);
@@ -119,23 +123,21 @@
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(rtbXML);
+            tabPage1.Controls.Add(trvXML);
             tabPage1.Location = new Point(4, 26);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(1033, 410);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "XML";
+            tabPage1.Text = "XML-TV";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // rtbXML
+            // trvXML
             // 
-            rtbXML.Font = new Font("Lucida Console", 11.25F, FontStyle.Regular, GraphicsUnit.Point,  0);
-            rtbXML.Location = new Point(6, 6);
-            rtbXML.Name = "rtbXML";
-            rtbXML.Size = new Size(1021, 398);
-            rtbXML.TabIndex = 5;
-            rtbXML.Text = "";
+            trvXML.Location = new Point(6, 6);
+            trvXML.Name = "trvXML";
+            trvXML.Size = new Size(1021, 398);
+            trvXML.TabIndex = 6;
             // 
             // tabPage5
             // 
@@ -174,16 +176,6 @@
             rtbFHIR.TabIndex = 0;
             rtbFHIR.Text = "";
             // 
-            // lblEIIE
-            // 
-            lblEIIE.AutoSize = true;
-            lblEIIE.Font = new Font("Lucida Sans", 15.75F, FontStyle.Bold, GraphicsUnit.Point,  0);
-            lblEIIE.Location = new Point(11, 9);
-            lblEIIE.Name = "lblEIIE";
-            lblEIIE.Size = new Size(376, 23);
-            lblEIIE.TabIndex = 7;
-            lblEIIE.Text = "EIIE : : Epi Info Integration Engine";
-            // 
             // tabPage2
             // 
             tabPage2.Controls.Add(rtbYaml);
@@ -201,6 +193,34 @@
             rtbYaml.Size = new Size(1027, 404);
             rtbYaml.TabIndex = 0;
             rtbYaml.Text = "";
+            // 
+            // lblEIIE
+            // 
+            lblEIIE.AutoSize = true;
+            lblEIIE.Font = new Font("Lucida Sans", 15.75F, FontStyle.Bold, GraphicsUnit.Point,  0);
+            lblEIIE.Location = new Point(11, 9);
+            lblEIIE.Name = "lblEIIE";
+            lblEIIE.Size = new Size(376, 23);
+            lblEIIE.TabIndex = 7;
+            lblEIIE.Text = "EIIE : : Epi Info Integration Engine";
+            // 
+            // tabPage6
+            // 
+            tabPage6.Controls.Add(rtbXML);
+            tabPage6.Location = new Point(4, 26);
+            tabPage6.Name = "tabPage6";
+            tabPage6.Size = new Size(1033, 410);
+            tabPage6.TabIndex = 6;
+            tabPage6.Text = "XML";
+            tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // rtbXML
+            // 
+            rtbXML.Location = new Point(3, 3);
+            rtbXML.Name = "rtbXML";
+            rtbXML.Size = new Size(1027, 404);
+            rtbXML.TabIndex = 0;
+            rtbXML.Text = "";
             // 
             // frmParseHL7
             // 
@@ -220,6 +240,7 @@
             tabPage5.ResumeLayout(false);
             tabPage4.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
+            tabPage6.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -232,7 +253,6 @@
         private OpenFileDialog openFileDialog;
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private RichTextBox rtbXML;
         private TabPage tabPage3;
         private RichTextBox rtbRaw;
         private TabPage tabPage4;
@@ -242,5 +262,8 @@
         private RichTextBox rtbXml2Json;
         private TabPage tabPage2;
         private RichTextBox rtbYaml;
+        private TreeView trvXML;
+        private TabPage tabPage6;
+        private RichTextBox rtbXML;
     }
 }
